@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Mage -->	
+	<bean id="gandalf" class="videojuego.personaje.Personaje">
+		<constructor-arg value="Gandalf"></constructor-arg>
+		<constructor-arg ref="mage"></constructor-arg>
+	</bean>
+		
+	<bean id="mage" class="videojuego.personaje.Mage">
+		<constructor-arg value="Mago"></constructor-arg>
+		<constructor-arg ref="baston"></constructor-arg>
+		<constructor-arg ref="knowledge"></constructor-arg>
+		<constructor-arg value="100"></constructor-arg>
+	</bean>
+	
+	<bean id="baston" class="videojuego.armas.Spell">
+		<constructor-arg value="20"></constructor-arg>
+	</bean>
+	
+	<bean id="knowledge" class="videojuego.personaje.Knowledge">
+		<constructor-arg value="Conocimiento"></constructor-arg>
+		<constructor-arg value="10"></constructor-arg>
+	</bean>
+	
+	<!-- Warrior -->	
+	<bean id="aragorn" class="videojuego.personaje.Personaje">
+		<constructor-arg value="Aragorn"></constructor-arg>
+		<constructor-arg ref="warrior"></constructor-arg>
+	</bean>
+	
+	<bean id="warrior" class="videojuego.personaje.Warrior">
+		<constructor-arg value="Guerrero"></constructor-arg>
+		<constructor-arg ref="espada"></constructor-arg>
+		<constructor-arg ref="knowledge"></constructor-arg>
+		<constructor-arg value="100"></constructor-arg>
+	</bean>
+	
+	<bean id="espada" class="videojuego.armas.Espada">
+		<constructor-arg value="20"></constructor-arg>
+	</bean>
+	
+	<bean id="strength" class="videojuego.personaje.Strength">
+		<constructor-arg value="Fuerza"></constructor-arg>
+		<constructor-arg value="10"></constructor-arg>
+	</bean>	
+	
+	<!-- Batalla -->
+	<bean id="batalla" class="videojuego.personaje.Combat">
+		
+	</bean>
+	
+</beans>
